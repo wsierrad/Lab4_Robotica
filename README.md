@@ -124,3 +124,11 @@ A continuacion se puede ver la implementacion con el robot en el laboratorio Lab
 [![Practica 4: Implementación Real](https://img.youtube.com/vi/nFzFDuL_ORQ/0.jpg)](https://youtu.be/nFzFDuL_ORQ)
 
 ## Descripción de la solución planteada
+Se describe la solución planteada:
+-	En primer lugar, se diseña la herramienta, se desea usar una herramienta con resorte para darle algo de tolerancia al marcador. Se genera su diseño CAD, y se imprime en 3D, para luego ser ensamblada en el robot.
+-	Esta herramienta en modelo CAD, se importa a RobotStudio, para realizar su calibración en el software. 
+-	Se realiza la calibración de la herramienta, y este resultado se compara con el de RobotStudio, para verificar diferencias en distancias entre la simulación y el mundo real, tras la pieza ser implementada.
+-	En el software, se crean los dos workobjects, para cada una de las escrituras, y así facilitar su desplazamiento de ser necesario.
+-	Se diseña la trayectoria que debe realizar el robot, para trazar las iniciales de los tres integrantes Brian (B), Fabian (F) y William (W). Se programaron todos los robtargets, que posteriormente generan los paths. Estos paths se sincronizan con RAPID para generar el módulo, que será importado posteriormente al robot. Se tuvieron en cuenta todas las indicaciones del laboratorio, a la hora de crear estas trayectorias.
+-	Se importa el módulo al controlador, y se realizan los trazos. Se verifican las distancias, y se cuadran las posiciones de los workobjects, para que todo este correcto, y así lograr las tareas deseadas.
+

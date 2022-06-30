@@ -110,6 +110,8 @@ Y asi se definio tambien para el Path_20 que contine las instrucciones para el m
 De esta forma se completo el desarrollo del codigo y se procedio a realizar las pruebas en el laboratorio despues de haber realizado la simulacion en RobotStudio
 ## Calibracion de la herramienta
 
+Ya construida la herramienta se procede a ensamblar el portaherramienta, y se procede a realizar la calibración. A partir del ensamble en el espacio de trabajo de un punto fijo para tener un punto de referencia y utilizar el método de acercamiento en el eje z y acercamiento de la herramienta por 3 diferentes configuraciones del robot. Se realizo una primera calibración como se ve en la imagen de la definición de la herramienta, aquí se observa que el error máximo es de 2,4 mm, error mínimo de 2,2 mm y un error promedio de 2,3 mm. Estos errores se podrían compensar con la distancia de retracción que aporta el resorte de la herramienta sin embargo se toma la decisión de repetir la calibración. De la cual el grupo de trabajo olvido tomar foto, pero su error promedio era alrededor de 0,5 mm. 
+
 ![photo_2022-06-24_17-26-40](https://user-images.githubusercontent.com/36159469/176571642-f9e8e15c-c4b8-4055-9782-ac1b769c593b.jpg)  
 ![photo_2022-06-24_17-26-39](https://user-images.githubusercontent.com/36159469/176571647-72999a6d-08e2-4c95-a0a6-ef888fffd367.jpg)  
 

@@ -35,7 +35,7 @@ MODULE ModuleFab
     PERS wobjdata Cuadrante2:=[FALSE,TRUE,"",[[450,-400,110],[0.683012702,-0.183012702,-0.183012702,-0.683012702]],[[0,0,0],[1,0,0,0]]];
     PERS tooldata Marker:=[TRUE,[[-0.917808,-1.75486,202.667],[0.812949,-0.58005,0.0419499,-0.0299318]],[0.2,[0,0,1],[1,0,0,0],0,0,0]];
 ```
-Posterior a esto vemos las definicion de constantes, estos van a ser los puntos guia para nuestra trayectoria, para ver todo el codigo completo puede consultar el programa [adjunto al repo] (ModuleFab.mod)
+Posterior a esto vemos las definicion de constantes, estos van a ser los puntos guia para nuestra trayectoria, para ver todo el codigo completo puede consultar el programa [adjunto al repo](ModuleFab.mod)
 ```
     CONST robtarget Target_5:=[[-54.660161362,322.568528773,705.32582312],[0.5,-0.683012702,-0.5,-0.183012702],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
     CONST robtarget Target_10:=[[0.000029436,0.000002786,-0.00001954],[0,1,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
@@ -49,7 +49,65 @@ Posterior a esto vemos las definicion de constantes, estos van a ser los puntos 
     CONST robtarget Target_250:=[[0.000008509,0.000003577,-0.00001118],[0.000000006,1,0,-0.000000002],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
     CONST robtarget Target_260:=[[-54.660161362,322.568528773,705.32582312],[0.5,-0.683012702,-0.5,-0.183012702],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
 ```
-
+Posterior a esto se definio el main el cual ejecutara dos procedientos ya declarados que contendran las intrucciones para moverse en cada workObject
+```
+    PROC main10()
+        Path_10;
+        Path_20;
+    ENDPROC
+```
+Por ultimo en cada procedimiento se declararon las instrucciones MOVL necesario para realizar la trayectoria deseada siguiendo todos los puntos previamente definidos, en cada instruccion se definia la velocidad la cual es estandar para todos los movimiento y se establecio en 200 mm/s y el valor de Z en 10 para lograr realizar los trazos  
+Para este procedimiento podemos ver que tenemos dos puntos que hacen referencia al Cuadrante2 esto es porque se selecciono como Home el Home del Robot y se establecio este Home respecto a el segundo workObject.  
+```
+PROC Path_10()
+        MoveL Target_5,v200,z10,Marker\WObj:=Cuadrante2;
+        MoveL Target_10,v200,z10,Marker\WObj:=Cuadrante1;
+        MoveL Target_20,v200,z10,Marker\WObj:=Cuadrante1;
+        MoveL Target_30,v200,z10,Marker\WObj:=Cuadrante1;
+        MoveL Target_40,v200,z10,Marker\WObj:=Cuadrante1;
+        MoveL Target_50,v200,z10,Marker\WObj:=Cuadrante1;
+        MoveL Target_60,v200,z10,Marker\WObj:=Cuadrante1;
+        MoveL Target_70,v200,z10,Marker\WObj:=Cuadrante1;
+        MoveL Target_75,v200,z10,Marker\WObj:=Cuadrante1;
+        .
+        .
+        .
+        MoveL Target_190,v200,z10,Marker\WObj:=Cuadrante1;
+        MoveL Target_200,v200,z10,Marker\WObj:=Cuadrante1;
+        MoveL Target_210,v200,z10,Marker\WObj:=Cuadrante1;
+        MoveL Target_220,v200,z10,Marker\WObj:=Cuadrante1;
+        MoveL Target_230,v200,z10,Marker\WObj:=Cuadrante1;
+        MoveL Target_240,v200,z10,Marker\WObj:=Cuadrante1;
+        MoveL Target_250,v200,z10,Marker\WObj:=Cuadrante1;
+        MoveL Target_260,v200,z10,Marker\WObj:=Cuadrante2;
+    ENDPROC
+```
+Y asi se definio tambien para el Path_20 que contine las instrucciones para el movimiento en el plano inclinado
+```
+    PROC Path_20()
+        MoveL Target_5,v200,z10,Marker\WObj:=Cuadrante2;
+        MoveL Target_10,v200,z10,Marker\WObj:=Cuadrante2;
+        MoveL Target_20,v200,z10,Marker\WObj:=Cuadrante2;
+        MoveL Target_30,v200,z10,Marker\WObj:=Cuadrante2;
+        MoveL Target_40,v200,z10,Marker\WObj:=Cuadrante2;
+        MoveL Target_50,v200,z10,Marker\WObj:=Cuadrante2;
+        MoveL Target_60,v200,z10,Marker\WObj:=Cuadrante2;
+        MoveL Target_70,v200,z10,Marker\WObj:=Cuadrante2;
+        .
+        .
+        .
+        MoveL Target_180,v200,z10,Marker\WObj:=Cuadrante2;
+        MoveL Target_190,v200,z10,Marker\WObj:=Cuadrante2;
+        MoveL Target_200,v200,z10,Marker\WObj:=Cuadrante2;
+        MoveL Target_210,v200,z10,Marker\WObj:=Cuadrante2;
+        MoveL Target_220,v200,z10,Marker\WObj:=Cuadrante2;
+        MoveL Target_230,v200,z10,Marker\WObj:=Cuadrante2;
+        MoveL Target_240,v200,z10,Marker\WObj:=Cuadrante2;
+        MoveL Target_250,v200,z10,Marker\WObj:=Cuadrante2;
+        MoveL Target_260,v200,z10,Marker\WObj:=Cuadrante2;
+    ENDPROC
+```
+De esta forma se completo el desarrollo del codigo y se procedio a realizar las pruebas en el laboratorio despues de haber realizado la simulacion en RobotStudio
 ## Calibracion de la herramienta
 
 ![photo_2022-06-24_17-26-40](https://user-images.githubusercontent.com/36159469/176571642-f9e8e15c-c4b8-4055-9782-ac1b769c593b.jpg)  
@@ -57,7 +115,10 @@ Posterior a esto vemos las definicion de constantes, estos van a ser los puntos 
 
 
 ## Simulación en RobotStudio
+A continuacion se puede ver la simulacion final en RobotStudio en la cual el Robot realiza las dos trayectorias cumpliendo los requerimientos de la practica  
+[Practica 4: Implementación Simulada](https://youtu.be/zRVmG34LNds)
 ## Implementación de la práctica con los robots reales.
-
+A continuacion se puede ver la implementacion con el robot en el laboratorio LabSir en la cual el Robot realiza las dos trayectorias cumpliendo los requerimientos de la practica.  
 [Practica 4: Implementación Real](https://youtu.be/nFzFDuL_ORQ)
+
 ## Descripción de la solución planteada

@@ -116,9 +116,9 @@ De esta forma se completo el desarrollo del codigo y se procedio a realizar las 
 
 ## Simulación en RobotStudio
 A continuacion se puede ver la simulacion final en RobotStudio en la cual el Robot realiza las dos trayectorias cumpliendo los requerimientos de la practica  
-[Practica 4: Implementación Simulada](https://youtu.be/zRVmG34LNds)
+[![Practica 4: Simulación](https://img.youtube.com/vi/zRVmG34LNds/0.jpg)](https://youtu.be/zRVmG34LNds)
 ## Implementación de la práctica con los robots reales.
 A continuacion se puede ver la implementacion con el robot en el laboratorio LabSir en la cual el Robot realiza las dos trayectorias cumpliendo los requerimientos de la practica.  
-[Practica 4: Implementación Real](https://youtu.be/nFzFDuL_ORQ)
+[![Practica 4: Implementación Real](https://img.youtube.com/vi/nFzFDuL_ORQ/0.jpg)](https://youtu.be/nFzFDuL_ORQ)
 
 ## Descripción de la solución planteada

@@ -1,6 +1,7 @@
 # Lab4_Robotica
 ## Integrantes:
 
+Fabian Steven Galindo Peña
 Brian Alejandro Vásquez González  
 William Arturo Sierra Díaz  
 
